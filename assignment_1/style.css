@@ -1,0 +1,299 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7fc;
+    color: #25253b;
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+header {
+    background: #17172e;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 span,
+.hero h2 span {
+    color: #a78bfa;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a78bfa;
+}
+
+/* Hero section */
+.hero {
+    min-height: 430px;
+    padding: 65px 10%;
+    background: linear-gradient(120deg, #17172e, #343466);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.tag {
+    color: #a78bfa;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin: 12px 0;
+}
+
+.hero h3 {
+    color: #c4b5fd;
+    margin-bottom: 15px;
+}
+
+.hero img {
+    width: 200px;
+    height: 200px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #a78bfa;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 11px 25px;
+    background: #a78bfa;
+    color: #17172e;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-3px);
+}
+
+/* General section styling */
+section:not(.hero) {
+    padding: 55px 10%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 29px;
+    margin-bottom: 12px;
+    color: #29294b;
+}
+
+.subtitle {
+    color: #77778c;
+    margin-bottom: 25px;
+}
+
+.about-section {
+    background: white;
+}
+
+.about-section p {
+    max-width: 750px;
+    margin: auto;
+}
+
+/* Skills grid */
+.skills-section {
+    background: #f0edff;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    list-style: none;
+}
+
+.skills-list li {
+    background: white;
+    padding: 18px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 3px 12px #0000000d;
+    transition: 0.3s;
+}
+
+.skills-list li:hover {
+    background: #29294b;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* Projects table */
+.projects-section {
+    background: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #29294b;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background: #f0edff;
+}
+
+/* Contact form */
+.contact-section {
+    background: #f0edff;
+}
+
+form {
+    max-width: 550px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 4px 15px #0000000d;
+}
+
+form > label {
+    display: block;
+    margin: 12px 0 5px;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    outline: none;
+}
+
+form input:focus {
+    border-color: #8b5cf6;
+}
+
+.radio-group {
+    margin: 12px 0;
+}
+
+.radio-group label {
+    margin-right: 12px;
+}
+
+form button {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 7px;
+    background: #29294b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #8b5cf6;
+}
+
+/* Footer */
+footer {
+    padding: 25px;
+    background: #17172e;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    display: inline-block;
+    color: #a78bfa;
+    text-decoration: none;
+    margin: 8px;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* Mobile responsive design */
+@media (max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    .radio-group label {
+        display: block;
+        margin: 8px 0;
+    }
+}
